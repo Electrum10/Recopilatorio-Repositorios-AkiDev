@@ -1,0 +1,26 @@
+---
+interface Props {
+    Titulo: string;
+    Imagen: string;
+}
+
+const {Titulo, Imagen} = Astro.props
+---
+
+
+<main>
+    <article>
+        <h1>{Titulo}</h1>
+        <p>Actualizado hace: </p>
+    </article>
+</main>
+
+<style>
+    main {
+        background-image: url({Imagen});
+    }
+    
+    article {
+        background-color: rgba(118, 177, 67, 0.68);
+    }
+</style>
