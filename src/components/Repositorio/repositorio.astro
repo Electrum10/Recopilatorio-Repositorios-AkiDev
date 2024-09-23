@@ -1,0 +1,42 @@
+---
+interface Props {
+    Titulo: string;
+    Imagen: string;
+}
+
+const {Titulo, Imagen} = Astro.props
+---
+
+
+<main>
+    <img src={Imagen} alt="Imagen">
+    <article>
+        <h1>{Titulo}</h1>
+        <p>Actualizado hace: </p>
+    </article>
+</main>
+
+<style>
+    main {
+        position: relative;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: rgb(255, 255, 255);
+        border: 3px solid;
+        border-radius: 20px;
+    }
+
+    main img {
+        position: relative;
+        width: 100%;
+        border-radius: 17px 17px 0px 0px;
+    }
+    
+    article {
+        margin-top: -7px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: auto;
+    }
+</style>
