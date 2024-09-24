@@ -1,0 +1,59 @@
+---
+---
+
+<header>
+    <div class="logo">
+      <img src="/tu_foto.jpg" alt="Tu foto">
+    </div>
+    <div class="buttons">
+      <a href="https://github.com/tu_usuario" target="_blank" class="btn github">GitHub</a>
+      <a href="#" class="btn membership">Membresía Gratis</a>
+    </div>
+    <style>
+      header {
+        position: sticky; /* Agregamos esta propiedad */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+        z-index: 1; /* Agregamos esta propiedad para que se superponga sobre otros elementos */
+      }
+  
+      .logo {
+        margin-right: 20px;
+      }
+  
+      .logo img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+  
+      .buttons {
+        display: flex;
+        align-items: center;
+      }
+  
+      .btn {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+  
+      .btn:hover {
+        background-color: #3e8e41;
+      }
+  
+      .github {
+        margin-right: 10px;
+      }
+  
+      .membership {
+        background-color: #ff9800;
+      }
+    </style>
+  </header>
