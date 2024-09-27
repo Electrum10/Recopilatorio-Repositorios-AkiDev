@@ -2,33 +2,58 @@
 interface Props {
     Titulo: string;
     Imagen: string;
+    EnlaceAlRepositorio: string;
+    Descripción: string;
 }
 
-const {Titulo, Imagen} = Astro.props
+const {Titulo, Imagen, EnlaceAlRepositorio, Descripción} = Astro.props
 ---
 
 
 <main>
-    <img src={Imagen} alt="Imagen">
+    <a href={EnlaceAlRepositorio}>
+    <img src={Imagen} alt="Si te sale esto, quiere decir que el repositorio es nuevo y aun no he puesto una foto">
     <article>
         <h1>{Titulo}</h1>
-        <p>Actualizado hace: </p>
+        <p>{Descripción}</p>
     </article>
+</a>
 </main>
 
 <style>
+
+    h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
     main {
         position: relative;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         background-color: rgb(255, 255, 255);
         border: 3px solid;
         border-radius: 20px;
+        transition: 0.2s;
     }
+
+    main:hover {
+        transform: scale(1.05);
+        transition: 0.2s;
+    }
+
 
     main img {
         position: relative;
         width: 100%;
         border-radius: 17px 17px 0px 0px;
+    }
+
+    main article img {
+      width: 40%;
+      height: 10%;
+      text-align: left;
     }
     
     article {
@@ -39,5 +64,10 @@ const {Titulo, Imagen} = Astro.props
 
     h1 {
         font-size: auto;
+    }
+
+    article p {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 </style>

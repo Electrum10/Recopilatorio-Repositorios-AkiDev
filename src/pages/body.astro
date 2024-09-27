@@ -9,7 +9,7 @@ const repos = await response.json();
     <Inicio />
     <div class="Repositorios">
         {repos.map(repo => (
-            <Repositorio Titulo={repo.name} Imagen={"src/images/" + repo.name + ".png"}/>
+            <Repositorio Titulo={repo.name} Imagen={"src/images/" + repo.name + ".png"} EnlaceAlRepositorio={repo.html_url} Descripción={repo.description}/>
         ))}
     </div>
 </body>
@@ -27,6 +27,12 @@ const repos = await response.json();
         gap: 2rem;
         padding-left: 10%;
         padding-right: 10%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .Repositorios {
+            grid-template-columns: repeat(2,1fr);
+        }
     }
 </style>
 
